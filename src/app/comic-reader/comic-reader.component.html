@@ -1,0 +1,20 @@
+<app-header-title title="Webcomic Reader"></app-header-title>
+
+<div class="reader-container">
+  <img
+    class="comic-page"
+    [src]="pages[currentIndex]"
+    alt="Comic page {{ currentIndex + 1 }}"
+  />
+</div>
+
+<app-footer-navigation
+  [currentIndex]="currentIndex"
+  [totalPages]="pages.length"
+  [isFirst]="isFirst"
+  [isLast]="isLast"
+  [first]="first.bind(this)"
+  [previous]="previous.bind(this)"
+  [next]="next.bind(this)"
+  [last]="last.bind(this)"
+></app-footer-navigation> 
